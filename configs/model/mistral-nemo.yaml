@@ -1,0 +1,10 @@
+name: "mistral-nemo"
+hf_name: "mistralai/Mistral-Nemo-Instruct-2407"
+max_seq_length: 4096
+dtype: "bfloat16"
+trust_remote_code: true
+load_in_4bit: true
+
+tokenizer:
+  # It looks like it's not set in the library
+  pad_token: "<pad>"

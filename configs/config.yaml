@@ -1,0 +1,16 @@
+run_dir: ${hydra:run.dir}
+
+defaults:
+  - finetune: wildjailbreak_lora
+  - serve: default
+  - model: mistral-nemo
+
+# For all models
+model:
+  finetuned_dir: "./models/${finetune.model_name}"
+
+seed: 42
+no_cache: false
+wandb:
+  project: red-teamer
+  cache_dir: "./cache"

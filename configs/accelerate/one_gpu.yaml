@@ -1,0 +1,26 @@
+compute_environment: LOCAL_MACHINE
+debug: false
+deepspeed_config:
+  deepspeed_multinode_launcher: standard
+  zero_stage: 2
+  zero_optimization:
+    stage: 2
+    offload_optimizer:
+      device: cpu
+      pin_memory: true
+    contiguous_gradients: true
+    overlap_comm: true
+  fp16:
+    enabled: false
+  bf16:
+    enabled: true
+distributed_type: DEEPSPEED
+downcast_bf16: "no"
+machine_rank: 0
+main_training_function: main
+mixed_precision: bf16
+num_machines: 1
+num_processes: 1
+rdzv_backend: static
+same_network: true
+use_cpu: false

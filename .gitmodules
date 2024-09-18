@@ -1,0 +1,3 @@
+[submodule "Harmbench"]
+	path = Harmbench
+	url = git@github.com:romaingrx/Harmbench.git

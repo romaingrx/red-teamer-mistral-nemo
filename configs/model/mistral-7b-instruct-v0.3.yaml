@@ -1,0 +1,5 @@
+name: "mistral-7b-instruct-v0.3"
+hf_name: "mistralai/Mistral-7B-Instruct-v0.3"
+max_seq_length: 2048
+dtype: "float16"
+trust_remote_code: true
